@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative 'lib/table'
+require_relative 'lib/table_top'
 input_file_location = ARGV[0]
 
-puts Table.new(input_file_location).place_toy_robot_and_execute
+puts TableTop.new(input_file_location).place_toy_robot_and_execute

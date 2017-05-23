@@ -76,13 +76,13 @@ With input file location path:
     irb
     require_relative 'table'
     input_location_path = '/path/to/input_file.txt'
-    Table.new(input_location_path).place_toy_robot_and_execute # This will print like this '3,3,NORTH'
+    TableTop.new(input_location_path).place_toy_robot_and_execute # This will print like this '3,3,NORTH'
 
 Without input file location path:
 
     irb
     require_relative 'table'
-    Table.new.place_toy_robot_and_execute # This will print like this '3,3,NORTH'
+    TableTop.new.place_toy_robot_and_execute # This will print like this '3,3,NORTH'
 
 ## How to run specs
 

@@ -1,6 +1,6 @@
 require_relative 'input_file'
 
-class Table
+class TableTop
   attr_accessor :dimensions,
     :commands,
     :toy_robot,
@@ -40,7 +40,7 @@ class Table
   def validate_commands!
     actions = ToyRobot::ACTIONS.clone
     actions.delete('PLACE')
-    @commands = @commands.select{|command| (command[:command] == ToyRobot.place && command[:position_x] >= 0 && command[:position_x] <= @dimensions[:x] && command[:position_y] >= 0 && command[:position_y] <= @dimensions[:y]) || actions.include?(command[:command]) }
+    @commands = @commands.select{ |command| (command[:command] == ToyRobot.place && command[:position_x] >= 0 && command[:position_x] <= @dimensions[:x] && command[:position_y] >= 0 && command[:position_y] <= @dimensions[:y]) || actions.include?(command[:command]) }
   end
 
   def set_dimension(dimension_x, dimension_y)
