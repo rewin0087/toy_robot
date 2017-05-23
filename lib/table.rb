@@ -15,6 +15,7 @@ class Table
 
   def place_toy_robot_and_execute
     @commands = InputFile.new(@input_file_location).commands
+    validate_commands!
     place_command = @commands.shift
     total_commands = @commands.size
 
@@ -35,6 +36,12 @@ class Table
   end
 
   private
+
+  def validate_commands!
+    actions = ToyRobot::ACTIONS.clone
+    actions.delete('PLACE')
+    @commands = @commands.select{|command| (command[:command] == ToyRobot.place && command[:position_x] >= 0 && command[:position_x] <= @dimensions[:x] && command[:position_y] >= 0 && command[:position_y] <= @dimensions[:y]) || actions.include?(command[:command]) }
+  end
 
   def set_dimension(dimension_x, dimension_y)
     @dimensions =  if dimension_x && dimension_y

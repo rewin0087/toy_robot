@@ -185,5 +185,22 @@ RSpec.describe Table do
       it { expect(new_table.toy_robot_current_position).not_to be_empty }
       it { expect(new_table.toy_robot_current_position).to eql('3,2,EAST') }
     end
+
+    context 'Scenario 11 - When first PLACE command is invalid and its x and y position are out of bound and found another 2 valid PLACE commands' do
+      let(:new_table) { Table.new('spec/fixtures/scenario_11.txt') }
+      before { new_table.place_toy_robot_and_execute }
+
+      it { expect(new_table.commands).to be_a(Array) }
+      it { expect(new_table.commands).not_to be_empty }
+      it { expect(new_table.commands.size).to eql(6) }
+      it { expect(new_table.dimensions).not_to be_empty }
+      it { expect(new_table.dimensions).to be_a(Hash) }
+      it { expect(new_table.dimensions).to eql({ x: 5, y: 5 }) }
+      it { expect(new_table.toy_robot).not_to be_nil }
+      it { expect(new_table.toy_robot).to be_a(ToyRobot) }
+      it { expect(new_table.toy_robot_current_position).to be_a(String) }
+      it { expect(new_table.toy_robot_current_position).not_to be_empty }
+      it { expect(new_table.toy_robot_current_position).to eql('3,1,EAST') }
+    end
   end
 end
