@@ -186,7 +186,7 @@ RSpec.describe TableTop do
       it { expect(new_table_top.toy_robot_current_position).to eql('3,2,EAST') }
     end
 
-    context 'Scenario 11 - When first PLACE command is invalid and its x and y position are out of bound and found another 2 valid PLACE commands' do
+    context 'Scenario 11 - When first PLACE command is invalid and its x and y position are out of bound and found another valid PLACE commands' do
       let(:new_table_top) { TableTop.new('spec/fixtures/scenario_11.txt') }
       before { new_table_top.place_toy_robot_and_execute }
 
