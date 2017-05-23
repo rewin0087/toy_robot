@@ -52,9 +52,7 @@ class ToyRobot
   end
 
   def execute_commands
-    @commands.each do |command|
-      evaluate_command(command)
-    end
+    @commands.map(&method(:evaluate_command))
   end
 
   def evaluate_command(command)
@@ -99,27 +97,6 @@ class ToyRobot
     @output
   end
 
-  private
-
-  def validate_latest_position!
-    unless valid_current_position?
-      @movement_history.pop
-      last_position = @movement_history.last
-      # set last position
-      @current_position_x = last_position[:current_position_x]
-      @current_position_y = last_position[:current_position_y]
-      @current_facing_direction = last_position[:current_facing_direction]
-    end
-  end
-
-  def valid_current_position?
-    @current_position_y <= @table_dimensions[:y] && @current_position_x <= @table_dimensions[:x] && @current_position_y >= 0 && @current_position_x >= 0
-  end
-
-  def save_current_state!
-    @movement_history << { current_position_y: @current_position_y, current_position_x: @current_position_x, current_facing_direction: @current_facing_direction }
-  end
-
   def turn_left
     case @current_facing_direction
     when ToyRobot.north
@@ -144,5 +121,26 @@ class ToyRobot
     when ToyRobot.south
       @current_facing_direction = ToyRobot.west
     end
+  end
+
+  private
+
+  def validate_latest_position!
+    unless valid_current_position?
+      @movement_history.pop
+      last_position = @movement_history.last
+      # set last position
+      @current_position_x = last_position[:current_position_x]
+      @current_position_y = last_position[:current_position_y]
+      @current_facing_direction = last_position[:current_facing_direction]
+    end
+  end
+
+  def valid_current_position?
+    @current_position_y <= @table_dimensions[:y] && @current_position_x <= @table_dimensions[:x] && @current_position_y >= 0 && @current_position_x >= 0
+  end
+
+  def save_current_state!
+    @movement_history << { current_position_y: @current_position_y, current_position_x: @current_position_x, current_facing_direction: @current_facing_direction }
   end
 end

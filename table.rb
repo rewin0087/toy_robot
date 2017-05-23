@@ -1,5 +1,5 @@
 require_relative 'input_file'
-require 'pry'
+
 class Table
   attr_accessor :dimensions,
     :commands,
