@@ -1,5 +1,5 @@
-require_relative '../table'
-require_relative '../toy_robot'
+require_relative '../lib/table'
+require_relative '../lib/toy_robot'
 
 RSpec.describe Table do
   let(:table) { Table.new('spec/fixtures/scenario_1.txt') }

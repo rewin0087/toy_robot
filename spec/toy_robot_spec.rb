@@ -1,4 +1,4 @@
-require_relative '../toy_robot'
+require_relative '../lib/toy_robot'
 
 RSpec.describe ToyRobot do
   let(:commands) do

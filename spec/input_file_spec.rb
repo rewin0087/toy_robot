@@ -1,4 +1,4 @@
-require_relative '../input_file'
+require_relative '../lib/input_file'
 
 RSpec.describe InputFile do
   let(:input_file_location_path) { 'spec/fixtures/scenario_1.txt' }
