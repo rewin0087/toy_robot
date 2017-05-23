@@ -94,7 +94,6 @@ class ToyRobot
 
   def report
     @output = "#{@current_position_x},#{@current_position_y},#{@current_facing_direction}"
-    @output
   end
 
   def turn_left
@@ -141,6 +140,12 @@ class ToyRobot
   end
 
   def save_current_state!
-    @movement_history << { current_position_y: @current_position_y, current_position_x: @current_position_x, current_facing_direction: @current_facing_direction }
+    last_command = {
+      current_position_y: @current_position_y,
+      current_position_x: @current_position_x,
+      current_facing_direction: @current_facing_direction
+    }
+
+    @movement_history << last_command
   end
 end
