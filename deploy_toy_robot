@@ -2,4 +2,4 @@
 require_relative 'table'
 input_file_location = ARGV[0]
 
-Table.new(input_file_location).place_toy_robot_and_execute
+puts Table.new(input_file_location).place_toy_robot_and_execute

@@ -83,3 +83,9 @@ Without input file location path:
     irb
     require_relative 'table'
     Table.new.place_toy_robot_and_execute # This will print like this 'Output: 3,3,NORTH'
+
+## How to run specs
+
+To run the rspec tests, run rspec in the root of the directory in the terminal.
+
+    rspec

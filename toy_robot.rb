@@ -4,7 +4,8 @@ class ToyRobot
     :current_facing_direction,
     :table_dimensions,
     :commands,
-    :movement_history
+    :movement_history,
+    :output
 
   COMPASS = %w(NORTH SOUTH WEST EAST)
   ACTIONS = %w(LEFT RIGHT MOVE REPORT PLACE)
@@ -94,7 +95,8 @@ class ToyRobot
   end
 
   def report
-    puts "Output: #{@current_position_x},#{@current_position_y},#{@current_facing_direction}"
+    @output = "#{@current_position_x},#{@current_position_y},#{@current_facing_direction}"
+    @output
   end
 
   private
