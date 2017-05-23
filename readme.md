@@ -55,3 +55,31 @@ c)
     MOVE
     REPORT
     Output: 3,3,NORTH
+
+## How to run
+
+Open the root directory in the terminal then run deploy_toy_robot bash file with a location_path for the input file as '*.txt' format or you can skip the location_path and it will use the default input.txt file as default source of input.
+
+With input file location path (will use /path/to/input_file.txt as the source of input):
+
+    ./deploy_toy_robot /path/to/input_file.txt # This will print like this 'Output: 3,3,NORTH'
+
+Without input file location path and will use the default input.txt file for input source:
+
+    ./deploy_toy_robot # This will print like this 'Output: 3,3,NORTH'
+
+
+You can run the code also in the irb. Run irb in the root directory in the terminal.
+
+With input file location path:
+
+    irb
+    require_relative 'table'
+    input_location_path = '/path/to/input_file.txt'
+    Table.new(input_location_path).place_toy_robot_and_execute # This will print like this 'Output: 3,3,NORTH'
+
+Without input file location path:
+
+    irb
+    require_relative 'table'
+    Table.new.place_toy_robot_and_execute # This will print like this 'Output: 3,3,NORTH'

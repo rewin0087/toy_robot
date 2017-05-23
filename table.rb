@@ -25,7 +25,6 @@ class Table
 
     @toy_robot = ToyRobot.new(place_command[:position_x], place_command[:position_y], place_command[:facing], @dimensions, commands)
     @toy_robot.execute_commands
-    @toy_robot
   end
 
   private
