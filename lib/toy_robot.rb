@@ -52,6 +52,8 @@ class ToyRobot
   end
 
   def execute_commands
+    return unless valid_current_position?
+
     @commands.map(&method(:evaluate_command))
   end
 
