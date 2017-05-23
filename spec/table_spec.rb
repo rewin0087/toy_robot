@@ -11,7 +11,7 @@ RSpec.describe Table do
     it { expect(table).to respond_to(:input_file_location) }
     it { expect(table.dimensions).to be_a(Hash) }
     it { expect(table.dimensions.keys).to eql([:x, :y]) }
-    it { expect(table.dimensions).to eql({ x: 5, y: 5}) }
+    it { expect(table.dimensions).to eql({ x: 5, y: 5 }) }
     it { expect(table.commands).to be_a(Array) }
     it { expect(table.commands).to be_empty }
     it { expect(table.toy_robot).to be_nil }
@@ -29,7 +29,7 @@ RSpec.describe Table do
       it { expect(table.commands.size).to eql(2) }
       it { expect(table.dimensions).not_to be_empty }
       it { expect(table.dimensions).to be_a(Hash) }
-      it { expect(table.dimensions).to eql({ x: 5, y: 5}) }
+      it { expect(table.dimensions).to eql({ x: 5, y: 5 }) }
       it { expect(table.toy_robot).not_to be_nil }
       it { expect(table.toy_robot).to be_a(ToyRobot) }
       it { expect(table.toy_robot_current_position).to be_a(String) }
@@ -46,7 +46,7 @@ RSpec.describe Table do
       it { expect(new_table.commands.size).to eql(2) }
       it { expect(new_table.dimensions).not_to be_empty }
       it { expect(new_table.dimensions).to be_a(Hash) }
-      it { expect(new_table.dimensions).to eql({ x: 5, y: 5}) }
+      it { expect(new_table.dimensions).to eql({ x: 5, y: 5 }) }
       it { expect(new_table.toy_robot).not_to be_nil }
       it { expect(new_table.toy_robot).to be_a(ToyRobot) }
       it { expect(new_table.toy_robot_current_position).to be_a(String) }
@@ -63,7 +63,7 @@ RSpec.describe Table do
       it { expect(new_table.commands.size).to eql(5) }
       it { expect(new_table.dimensions).not_to be_empty }
       it { expect(new_table.dimensions).to be_a(Hash) }
-      it { expect(new_table.dimensions).to eql({ x: 5, y: 5}) }
+      it { expect(new_table.dimensions).to eql({ x: 5, y: 5 }) }
       it { expect(new_table.toy_robot).not_to be_nil }
       it { expect(new_table.toy_robot).to be_a(ToyRobot) }
       it { expect(new_table.toy_robot_current_position).to be_a(String) }
@@ -80,7 +80,7 @@ RSpec.describe Table do
       it { expect(new_table.commands.size).to eql(6) }
       it { expect(new_table.dimensions).not_to be_empty }
       it { expect(new_table.dimensions).to be_a(Hash) }
-      it { expect(new_table.dimensions).to eql({ x: 5, y: 5}) }
+      it { expect(new_table.dimensions).to eql({ x: 5, y: 5 }) }
       it { expect(new_table.toy_robot).not_to be_nil }
       it { expect(new_table.toy_robot).to be_a(ToyRobot) }
       it { expect(new_table.toy_robot_current_position).to be_a(String) }
@@ -97,7 +97,7 @@ RSpec.describe Table do
       it { expect(new_table.commands.size).to eql(10) }
       it { expect(new_table.dimensions).not_to be_empty }
       it { expect(new_table.dimensions).to be_a(Hash) }
-      it { expect(new_table.dimensions).to eql({ x: 5, y: 5}) }
+      it { expect(new_table.dimensions).to eql({ x: 5, y: 5 }) }
       it { expect(new_table.toy_robot).not_to be_nil }
       it { expect(new_table.toy_robot).to be_a(ToyRobot) }
       it { expect(new_table.toy_robot_current_position).to be_a(String) }
@@ -114,7 +114,7 @@ RSpec.describe Table do
       it { expect(new_table.commands.size).to eql(5) }
       it { expect(new_table.dimensions).not_to be_empty }
       it { expect(new_table.dimensions).to be_a(Hash) }
-      it { expect(new_table.dimensions).to eql({ x: 5, y: 5}) }
+      it { expect(new_table.dimensions).to eql({ x: 5, y: 5 }) }
       it { expect(new_table.toy_robot).not_to be_nil }
       it { expect(new_table.toy_robot).to be_a(ToyRobot) }
       it { expect(new_table.toy_robot_current_position).to be_nil }
@@ -130,7 +130,7 @@ RSpec.describe Table do
       it { expect(new_table.commands.size).to eql(3) }
       it { expect(new_table.dimensions).not_to be_empty }
       it { expect(new_table.dimensions).to be_a(Hash) }
-      it { expect(new_table.dimensions).to eql({ x: 5, y: 5}) }
+      it { expect(new_table.dimensions).to eql({ x: 5, y: 5 }) }
       it { expect(new_table.toy_robot).not_to be_nil }
       it { expect(new_table.toy_robot).to be_a(ToyRobot) }
       it { expect(new_table.toy_robot_current_position).to be_a(String) }
@@ -147,7 +147,7 @@ RSpec.describe Table do
       it { expect(new_table.commands.size).to eql(4) }
       it { expect(new_table.dimensions).not_to be_empty }
       it { expect(new_table.dimensions).to be_a(Hash) }
-      it { expect(new_table.dimensions).to eql({ x: 5, y: 5}) }
+      it { expect(new_table.dimensions).to eql({ x: 5, y: 5 }) }
       it { expect(new_table.toy_robot).not_to be_nil }
       it { expect(new_table.toy_robot).to be_a(ToyRobot) }
       it { expect(new_table.toy_robot_current_position).to be_a(String) }
@@ -164,7 +164,7 @@ RSpec.describe Table do
       it { expect(new_table.commands.size).to eql(5) }
       it { expect(new_table.dimensions).not_to be_empty }
       it { expect(new_table.dimensions).to be_a(Hash) }
-      it { expect(new_table.dimensions).to eql({ x: 5, y: 5}) }
+      it { expect(new_table.dimensions).to eql({ x: 5, y: 5 }) }
       it { expect(new_table.toy_robot).to be_nil }
       it { expect(new_table.toy_robot_current_position).to be_nil }
     end
@@ -178,7 +178,7 @@ RSpec.describe Table do
       it { expect(new_table.commands.size).to eql(4) }
       it { expect(new_table.dimensions).not_to be_empty }
       it { expect(new_table.dimensions).to be_a(Hash) }
-      it { expect(new_table.dimensions).to eql({ x: 5, y: 5}) }
+      it { expect(new_table.dimensions).to eql({ x: 5, y: 5 }) }
       it { expect(new_table.toy_robot).not_to be_nil }
       it { expect(new_table.toy_robot).to be_a(ToyRobot) }
       it { expect(new_table.toy_robot_current_position).to be_a(String) }
