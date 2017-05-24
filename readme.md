@@ -74,14 +74,14 @@ You can run the code also in the irb. Run irb in the root directory in the termi
 With input file location path:
 
     irb
-    require_relative 'table'
+    require_relative 'table_top'
     input_location_path = '/path/to/input_file.txt'
     TableTop.new(input_location_path).place_toy_robot_and_execute # This will print like this '3,3,NORTH'
 
 Without input file location path:
 
     irb
-    require_relative 'table'
+    require_relative 'table_top'
     TableTop.new.place_toy_robot_and_execute # This will print like this '3,3,NORTH'
 
 ## How to run specs
