@@ -99,28 +99,28 @@ class ToyRobot
   end
 
   def turn_left
-    case @current_facing_direction
+    @current_facing_direction = case @current_facing_direction
     when ToyRobot.north
-      @current_facing_direction = ToyRobot.west
+      ToyRobot.west
     when ToyRobot.west
-      @current_facing_direction = ToyRobot.south
+      ToyRobot.south
     when ToyRobot.east
-      @current_facing_direction = ToyRobot.north
+      ToyRobot.north
     when ToyRobot.south
-      @current_facing_direction = ToyRobot.east
+      ToyRobot.east
     end
   end
 
   def turn_right
-    case @current_facing_direction
+    @current_facing_direction = case @current_facing_direction
     when ToyRobot.north
-      @current_facing_direction = ToyRobot.east
+      ToyRobot.east
     when ToyRobot.west
-      @current_facing_direction = ToyRobot.north
+      ToyRobot.north
     when ToyRobot.east
-      @current_facing_direction = ToyRobot.south
+      ToyRobot.south
     when ToyRobot.south
-      @current_facing_direction = ToyRobot.west
+      ToyRobot.west
     end
   end
 
